@@ -106,7 +106,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="sujet">Sujet/Concours</option>
                     </select>
                 </div>
-                
+                <!-- Série (visible uniquement pour certains types) -->
+            <div class="mb-3" id="serieDiv" style="display:none;">
+                <label for="serie" class="form-label">Série :</label>
+                <select name="serie" id="serie" class="form-select">
+                    <option value="">Sélectionnez une série</option>
+                    <option value="A">A</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="G">G</option>
+                </select>
+            </div>
+
+            <!-- Niveau (pour séries A et F) -->
+            <div class="mb-3" id="niveauDiv" style="display:none;">
+                <label for="niveau" class="form-label">Niveau :</label>
+                <select name="niveau" id="niveau" class="form-select">
+                    <option value="">Sélectionnez un niveau</option>
+                    <option value="A">A</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
+            <!-- Matière -->
+            <div class="mb-3" id="matiereDiv" style="display:none;">
+                <label for="matiere" class="form-label">Matière :</label>
+                <select name="matiere" id="matiere" class="form-select">
+                    <option value="">Sélectionnez une matière</option>
+                    <option value="math">Mathématiques</option>
+                    <option value="pc">Physique-Chimie</option>
+                    <option value="svt">SVT</option>
+                    <option value="arabe">Arabe</option>
+                </select>
+            </div>
                 <div class="mb-3">
                     <label for="titre" class="form-label">Titre :</label>
                     <input type="text" name="titre" id="titre" class="form-control" required>
@@ -138,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </div>
-    
+
     <footer class="text-center mt-4">
         <p>Si vous rencontrez des difficultés, contactez le <a href="mailto:@gmail.com">webmaster</a></p>
         <p><a href="index.php">Retour page d'accueil</a></p>

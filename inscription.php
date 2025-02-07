@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include 'bd/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);

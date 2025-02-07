@@ -1,13 +1,14 @@
 <?php
 include 'config.php';
 
-// Suppression de document
+
+// Suppression de document \
 if (isset($_GET['sup']) && is_numeric($_GET['sup'])) {
     $id = $_GET['sup'];
     $sqlDelete = "DELETE FROM documents WHERE id = :id";
     $stmtDelete = $pdo->prepare($sqlDelete);
     $stmtDelete->execute([':id' => $id]);
-    header("Location: acueil.php?success=2");
+    header("Location: index.php?success=2");
     exit();
 }
 
@@ -78,7 +79,7 @@ foreach ($documents as $doc) {
 
         <section id="publication">
         <h2>PUBLIEZ VOTRE DOCUMENT</h2>
-        <p>Envoyez votre document rapidement et sans inscription en <a href="submit.php">cliquant ici</a></p>
+        <p>Envoyez un niveau document en <a href="submit.php">cliquant ici</a></p>
     </section>
         <?= $message ?>
 
@@ -123,7 +124,7 @@ foreach ($documents as $doc) {
                                                target="_blank" class="btn btn-sm btn-primary">
                                                 Voir le document
                                             </a>
-                                            <a href="acueil.php?sup=<?= $doc['id'] ?>" 
+                                            <a href="index.php?sup=<?= $doc['id'] ?>" 
                                                class="btn btn-sm btn-danger" 
                                                onclick="return confirm('Supprimer ce document ?');">
                                                 Supprimer

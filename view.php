@@ -169,11 +169,11 @@
             </script>";
         } else {
             // Si le mémoire n'existe pas, afficher un message d'erreur
-            echo "Mémoire non trouvé.";
+            echo "livre non trouvé.";
         }
     } else {
         // Si l'ID du mémoire n'est pas spécifié, afficher un message d'erreur
-        echo "ID du mémoire non spécifié.";
+        echo "ID du livre non spécifié.";
     }
     ?>
     <div>

@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ]);
 
             // Redirection en cas de succès
-            header("Location: acueil.php?success=1");
+            header("Location: index.php?success=1");
             exit();
         }
     } catch (PDOException $e) {
@@ -140,8 +140,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     
     <footer class="text-center mt-4">
-        <p>Si vous rencontrez des difficultés, contactez le <a href="mailto:depotmemo@gmail.com">webmaster</a></p>
-        <p><a href="acueil.php">Retour page d'accueil</a></p>
+        <p>Si vous rencontrez des difficultés, contactez le <a href="mailto:@gmail.com">webmaster</a></p>
+        <p><a href="index.php">Retour page d'accueil</a></p>
     </footer>
     <script>
     document.addEventListener('DOMContentLoaded', function() {

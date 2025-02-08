@@ -62,13 +62,15 @@ foreach ($documents as $doc) {
     </style>
 </head>
 <body>
+    
+        <?php
+    include 'inde.html';
+    ?>
+    
     <div class="container">
         <div class="d-flex justify-content-between align-items-center my-4">
-            <h2>Bibliothèque ZanouTek</h2>
-            <div>
-                <span>Connecté en tant que: <?= htmlspecialchars($_SESSION['user_email']) ?></span>
-                <a href="deconnexion.php" class="btn btn-danger btn-sm ml-2">Déconnexion</a>
-            </div>
+            <!-- <h2>Bibliothèque ZanouTek</h2> -->
+           
         </div>
 
         <div class="mb-4">
@@ -120,7 +122,10 @@ foreach ($documents as $doc) {
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
-
+    <div>
+                <span>Connecté en tant que: <?= htmlspecialchars($_SESSION['user_email']) ?></span>
+                <a href="deconnexion.php" class="btn btn-danger btn-sm ml-2">Déconnexion</a>
+            </div>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const typeFilter = document.getElementById('typeFilter');

@@ -1,0 +1,33 @@
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-form {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #333;
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.btn-primary {
+    border-radius: 20px;
+    background: #667eea;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #5563c1;
+}
+
+.alert {
+    border-radius: 10px;
+}
